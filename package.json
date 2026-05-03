@@ -1,0 +1,36 @@
+{
+  "name": "lego-f1-loading",
+  "version": "1.0.0",
+  "description": "Lego bricks scatter, snap into an F1 car, and drive off — a loading animation with start()/complete()/reset(). Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --minify --sourcemap"
+  },
+  "keywords": ["animation", "loading", "lego", "f1", "spinner", "ui", "zero-dependency"],
+  "sideEffects": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everything-frontend/lego-f1-loading"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
