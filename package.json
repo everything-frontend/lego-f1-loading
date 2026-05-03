@@ -20,7 +20,8 @@
   },
   "files": ["dist", "README.md"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean --minify --sourcemap"
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
   },
   "keywords": ["animation", "loading", "lego", "f1", "spinner", "ui", "zero-dependency"],
   "sideEffects": true,
